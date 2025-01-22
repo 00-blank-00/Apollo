@@ -1,0 +1,31 @@
+{% extends "base_templates/base.html"%}
+{% load static %}
+
+{% block title %}
+Apollo - Web Client
+{% endblock %}
+{% block page_content %}
+<div id="top_bar" class="scale-in-ver-top">
+    <div style="margin-right: 2vw;">
+        {% include 'base_templates/logo.html' %}
+    </div>
+    <div>
+        <h1 class="orange heading typewriter" style="font-size: 5vh; animation-delay: 0.5s">WELCOME_TO_APOLLO</h1>
+        <h3 class="blue heading typewriter" style="font-size: 3vh; animation-delay: 1.5s">World's smallest repository of knowledge</h3>
+    </div>
+    <div id="info">
+        <h5 class="title">Version: 0.01dev-A</h5>
+    </div>
+</div>
+<div class="funcPanel">
+    <button class="funcButton" type="button" >DATABASE_ACCESS</button>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Aliquam elit sapien, elementum ut nisl in, hendrerit rutrum est. 
+Fusce pretium lacus eget sem mollis, vel pharetra nunc ultricies. 
+Vivamus felis orci, tempus in semper vel, rhoncus sed ipsum. 
+Vivamus a quam id libero pulvinar faucibus. Pellentesque eu ex odio.
+Vivamus convallis eu libero quis condimentum. 
+Donec convallis ante id dolor cursus congue. 
+Sed cursus elit quam, et fringilla augue blandit feugiat.</p>
+{% endblock %}

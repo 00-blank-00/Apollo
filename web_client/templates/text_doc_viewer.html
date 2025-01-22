@@ -1,0 +1,33 @@
+{% extends 'base_templates/base.html' %}
+{% load static %}
+
+{% block title %} Apollo - Document Viewer {% endblock %}
+
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'text_doc.css' %}">
+<div id="header" class="scale-in-ver-top">
+    {% include 'base_templates/logo.html' %}
+    <div style="margin-left: 2vw">
+        <h1 class="orange typewriter" style="font-family: title">{{textEntry.title}}</h1>
+        <h4 class="blue typewriter" style="font-family: standard; animation-delay: 0.5s;">Description:</h4>
+        <h5 class="typewriter" style="font-family: standard; animation-delay: 1s;">{{textEntry.description}}</h5>
+    </div>
+    <div style="margin-left: auto; margin-right: 2vw;">
+        <h6 class="blue typewriter" style="font-family: title">DATE_CREATED: {{textEntry.date_created}}</h6>
+        <h6 class="blue typewriter" style="font-family: title">DATE_MODIFIED: {{textEntry.date_modified}}</h6>
+    </div>
+</div>
+<div id="textContent" class="slide-in-right">
+    {{textEntry.content}}
+</div>
+<footer id="footer" class="slide-in-bottom" valign="bottom">
+    <div class="slide-in-left">
+        <button class="funcButton" style="height: 5vh;" type="button" onclick="location.href = '../'">
+            <img class="funcButtonImage" style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'exit_icon.png' %}" height="100%">
+            <p style="margin: 0; padding: 0;" >RETURN_TO_DATABASE</p>
+        </button>
+    </div>
+</footer>
+{% endblock %}

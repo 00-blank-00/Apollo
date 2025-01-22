@@ -1,0 +1,80 @@
+#header {
+    display: flex;
+
+    --b: 5px;
+    /* thickness of the border */
+    --c: rgba(255, 255, 255, 0.35);
+    /* color of the border */
+    --w: 40px;
+    /* width of border */
+
+
+    border: var(--b) solid #ff000000;
+    /* space for the border */
+    --_g: #00000000 90deg, var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+
+    background-color: rgba(255, 255, 255, 0.093);
+
+    animation-timing-function: ease-in-out;
+
+    padding-left: 2vw;
+
+    margin-bottom: 5vh;
+}
+
+#textContent {
+    --b: 5px;
+    /* thickness of the border */
+    --c: rgba(255, 255, 255, 0.35);
+    /* color of the border */
+    --w: 40px;
+    /* width of border */
+
+
+    border: var(--b) solid #ff000000;
+    /* space for the border */
+    --_g: #00000000 90deg, var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+
+    background-color: rgba(255, 255, 255, 0.093);
+    padding: 3vw;
+}
+
+#footer {
+    --b: 5px;
+    /* thickness of the border */
+    --c: rgba(255, 255, 255, 0.35);
+    /* color of the border */
+    --w: 20px;
+    /* width of border */
+
+
+    border: var(--b) solid #ff000000;
+    /* space for the border */
+    --_g: #00000000 90deg, var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+
+    background-color: rgba(255, 255, 255, 0.093);
+
+    padding: 1vw;
+
+    position: fixed;
+
+    bottom: 1vh;
+}

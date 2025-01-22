@@ -1,0 +1,45 @@
+{% extends 'base_templates/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Apollo - Database
+{% endblock %}
+
+{% block page_content %}
+<div id="top_bar">
+    {% include 'base_templates/logo_small.html' %}
+    <div style='padding: 0 0 0 2vw; '>
+        <div>
+            <h1 class='title orange typewriter' style="text-align: center; text-justify: center; font-family: title">Apollo - Database Viewer</h1>
+        </div>
+        <div class="slide-in-right">
+            <button class="funcButton" style="height: 5vh;" type="button" onclick="location.href = '../'">
+                <img class="funcButtonImage" style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'exit_icon.png' %}" height="100%">
+                <p style="margin: 0; padding: 0;" >RETURN_TO_HOME_PAGE</p>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="fileContainer">
+    <div id="fileTreeDiv" class="slide-in-left blue">
+            <h3 style="font-family: title; animation-delay: 1s">FILE_TREE_VIEW</h3>
+    </div>
+    <div id="fileListDiv" class="slide-in-right blue">
+        <h3 style="font-family: title; padding-left: 3.5%; animation-delay: 1.5s">FILE_LIST</h3>
+        <div id="fileList">
+            {% for entry in data_entries%}
+            <div>
+                <button class="fileButton" onclick="location.href = 'text_document/{{entry.id}}'">
+                    <img style="margin-top: auto; margin-bottom: auto; padding: 0;" src="{% static 'file_icon.png' %}" height="80%">
+                    <div>
+                        <p>Title: {{entry.title}}</p>
+                        <p style="font-size: smaller">Modified: {{entry.date_modified}}</p>
+                    </div>
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

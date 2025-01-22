@@ -11,14 +11,25 @@ Apollo - Web Client
     </div>
     <div>
         <h1 class="orange heading typewriter" style="font-size: 5vh; animation-delay: 0.5s">WELCOME_TO_APOLLO</h1>
-        <h3 class="blue heading typewriter" style="font-size: 3vh; animation-delay: 1.5s">World's smallest repository of knowledge</h3>
+        <h3 class="blue heading typewriter" style="font-size: 3vh; animation-delay: 1s">World's smallest repository of knowledge</h3>
     </div>
     <div id="info">
         <h5 class="title">Version: 0.01dev-A</h5>
     </div>
 </div>
-<div class="funcPanel">
-    <button class="funcButton" type="button" >DATABASE_ACCESS</button>
+<div class="funcPanel slide-in-right">
+    <button class="funcButton scale-up-ver-bottom" type="button" onclick="location.href = '/database_viewer'"style="animation-delay: 0.4s" >
+        <img class="funcButtonImage" style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'folder_icon.png' %}" height="100%">
+        <p style="margin: 0; padding: 0;" >DATABASE_ACCESS</p>
+    </button>
+    <button class="funcButton scale-up-ver-bottom" type="button" style="animation-delay: 0.6s">
+        <img style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'folder_icon.png' %}" height="100%">
+        <p style="margin: 0; padding: 0;" >APOLLO_DOCUMENT_GENERATOR</p>
+    </button>
+    <button class="funcButton scale-up-ver-bottom" type="button" style="animation-delay: 0.8s">
+        <img style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'folder_icon.png' %}" height="100%">
+        <p style="margin: 0; padding: 0;" >APOLLO_DATA_SEARCH</p>
+    </button>
 </div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Aliquam elit sapien, elementum ut nisl in, hendrerit rutrum est. 

@@ -23,10 +23,14 @@
     {{textEntry.content}}
 </div>
 <footer id="footer" class="slide-in-bottom" valign="bottom">
-    <div class="slide-in-left">
+    <div style = "display:flex;" class="slide-in-left">
         <button class="funcButton" style="height: 5vh;" type="button" onclick="location.href = '../'">
             <img class="funcButtonImage" style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'exit_icon.png' %}" height="100%">
             <p style="margin: 0; padding: 0;" >RETURN_TO_DATABASE</p>
+        </button>
+        <button class="funcButton" style="height: 5vh; margin-left: 2vw;" type="button">
+            <img class="funcButtonImage" style="margin: 0; padding: 0 1vw 0 0;" src="{% static 'exit_icon.png' %}" height="100%">
+            <p style="margin: 0; padding: 0;" >EDIT_ENTRY</p>
         </button>
     </div>
 </footer>
